@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../assets/signup.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .formContainer {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 500px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+  }
+  
+  .heading {
+    margin-bottom: 25px;
+    color: #878585; 
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Input fields */
+  .formGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fff; 
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .formGroup input::placeholder {
+    color: rgba(255, 255, 255, 0.7); 
+  }
+  
+  .formGroup input:focus {
+    border-color: rgba(255, 255, 255, 0.7); 
+  }
+  
+  /* SignUp Button */
+  .signupBtn {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: rgba(0, 123, 255, 0.8); 
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signupBtn:hover {
+    background-color: rgba(0, 86, 179, 0.8); 
+  }
+  
+  /* Divider */
+  .divider {
+    margin: 20px 0;
+    color: rgba(255, 255, 255, 0.7); 
+    position: relative;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    margin: auto;
+  }
+  
+  .divider::before {
+    margin-right: 10px;
+  }
+  
+  .divider::after {
+    margin-left: 10px;
+  }
+  
+  /* Google Button */
+  .googleBtn {
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fff; 
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .googleBtn:hover {
+    background-color: rgba(255, 255, 255); 
+  }
+  
+  /* Login Link */
+  .loginLink {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+  }
+  
+  .loginLink a {
+    color: rgba(0, 123, 255, 0.8); 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .loginLink a:hover {
+    text-decoration: underline;
+  }

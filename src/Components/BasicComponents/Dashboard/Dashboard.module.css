@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+
+/* Dashboard Body Main Div */
+.mainDiv{
+    height: 100vh;
+    background: linear-gradient(90deg,grey,rgb(215, 214, 214),grey);
+}
+
+/* Main Heading Parent Div */
+.DashHead{
+    padding: 5px;
+}
+
+.DashHead h1{
+    text-align: center;
+    padding: 10px;
+    box-shadow:4px 5px 8px gray;
+    border-bottom: 5px solid gray;
+}
+
+/* Button Component Div */
+.Btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    column-gap: 15px;
+    /* border: 5px solid grey; */
+    border-top: none;
+    /* box-shadow: inset -5px -5px 5px grey; */
+    padding: 10px;
+}
+
+.check{
+    /* width: 30%; */
+    border: 3px solid red;
+    height: 50vh;
+}
