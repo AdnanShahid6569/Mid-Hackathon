@@ -1,0 +1,32 @@
+/* src/components/RoomsList.module.css */
+.container {
+    padding: 20px;
+  }
+  
+  .roomsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .roomCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .content p {
+    margin: 5px 0;
+  }

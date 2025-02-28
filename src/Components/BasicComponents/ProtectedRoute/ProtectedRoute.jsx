@@ -1,8 +1,28 @@
-import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
+import React from 'react';
+import { Navigate } from 'react-router-dom';
 
-const ProtectedRoute = () => {
-  return localStorage.getItem('UID') ? <Outlet /> : <Navigate to='/'/>
-}
+const ProtectedRoute = ({ children, role }) => {
+  const userData = JSON.parse(localStorage.getItem('UserData'));
 
-export default ProtectedRoute
+  // If userData is not available, redirect to login
+ if (!userData) {
+    return <Navigate to="/login" />;
+  } 
+
+  // If role is an array, check if the user's role is included
+  if (Array.isArray(role)) {
+    if (!role.includes(userData.selValue)) {
+      return <Navigate to="/login" />;
+    }
+  }
+  // If role is a string, check if it matches the user's role
+  else if (userData.selValue !== role) {
+    alert("Sorry Only Admin Can Acess")
+    return <Navigate to='/Dashboard'/>
+  }
+
+  // If authorized, render the children
+  return children;
+};
+
+export default ProtectedRoute;

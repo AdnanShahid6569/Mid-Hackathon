@@ -5,17 +5,17 @@ import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import auth, { db } from '../../firebaseConfig';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, getDocs } from 'firebase/firestore';
+import SignUp from '../Signup/Signup';
 
-function Login() {
-   
+function Login() {   
     
-      const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState('');
   const [email,setemail] = useState();
   const [pass,setpass] = useState();
   const [name,setname] = useState();
 
-  const [store,setStore] = useState([]);
+  const [store,setStore] = useState(null);
 
   const navigate = useNavigate();
 const handleClick=(e)=>{
@@ -25,21 +25,47 @@ const handleClick=(e)=>{
 }
 
   const signInData=()=>{
+
 console.log(email,pass);
 signInWithEmailAndPassword(auth, email, pass)
   .then( async(userCredential) => {
-      const userID = userCredential.user.uid;
+    const userID = userCredential.user.uid;
     const getData = await getDoc(doc(db,'users',userID))
-    
-   console.log(getData.data());
-   
- localStorage.setItem('userData',JSON.stringify(getData.data()))
-   
-  navigate('/Dashboard')
-   
-    // console.log(user);
-    // console.log(userID);
-    
+if(getData.exists()){
+
+  const data = getData.data();
+  console.log(data); 
+  localStorage.setItem('UserData',JSON.stringify(data))
+  localStorage.setItem('uid',JSON.stringify(userID))
+  setStore(data); 
+
+  const role = data.selValue;
+  if(role === "User" && selectedValue === "User"){
+    navigate("/Dashboard")
+     
+   }
+
+   if(data.name === "Adnan" && data.lastname === "Shahid" && data.email === 'adnan@gmail.com' && data.selValue === "Admin" && data.pass === "adnan123"){
+
+     if(role === "Admin" && selectedValue === "Admin"){
+       
+      navigate('/Dashboard')
+      
+      } 
+    }
+       
+   if(role === "Admin" && selectedValue === "User" || role === "User" && selectedValue === "Admin"){
+    alert(`Please Select a ${role}`)
+   }
+  
+  }
+
+else{console.log('no ');
+}
+
+
+      
+  // navigate('/Dashboard')    
   
   })
   .catch((error) => {
@@ -48,7 +74,6 @@ signInWithEmailAndPassword(auth, email, pass)
     console.log(errorMessage);
     
   });
-
 
   }
 

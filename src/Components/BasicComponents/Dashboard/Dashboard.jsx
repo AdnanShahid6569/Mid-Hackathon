@@ -9,7 +9,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
-import { Button, Divider, ListItemText } from '@mui/material';
+import { Button, Collapse, Divider, ListItemText } from '@mui/material';
 import { GiFlowerPot } from "react-icons/gi";
 import { AiOutlineLogout } from "react-icons/ai";
 import { FaChalkboardTeacher } from "react-icons/fa";
@@ -23,7 +23,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 const drawerWidth = 250;
 
 export default function Dashboard() {
-
+  const [room, setRoom] = React.useState(false);
   const navigate = useNavigate();
   const nav = useNavigate();
 
@@ -61,7 +61,8 @@ export default function Dashboard() {
           <List>
             {/* Parent Item */}
             <ListItem disablePadding>
-              <ListItemButton onClick={()=>{navigate('User')}}>
+              <ListItemButton onClick={()=>{navigate('Users')}}>
+                
                 <ListItemIcon>
                   <AccessibilityNewIcon style={{fontSize:'30px'}}/>
                 </ListItemIcon>
@@ -75,7 +76,7 @@ export default function Dashboard() {
           <List>
             {/* Parent Item */}
             <ListItem disablePadding>
-              <ListItemButton >
+              <ListItemButton onClick={()=>{navigate('custumer')}}>
                 <ListItemIcon>
                   <AccessibilityNewIcon style={{fontSize:'30px'}}/>
                 </ListItemIcon>
@@ -91,13 +92,35 @@ export default function Dashboard() {
           <List>
             {/* Parent Item */}
             <ListItem disablePadding>
-              <ListItemButton >
+              <ListItemButton onClick={()=>{setRoom(!room)}}>
                 <ListItemIcon>
                   <FaChalkboardTeacher style={{fontSize:'25px'}}/>
                 </ListItemIcon>
                 <ListItemText primary="Room" />
               </ListItemButton>
             </ListItem>
+
+            <Collapse in={room} timeout='auto' >
+            <List component = 'div' disablePadding>
+            <ListItem>
+              <ListItemButton onClick={()=>{navigate("Room")}}>
+                <ListItemIcon>
+                  <FaChalkboardTeacher style={{fontSize:'25px'}}/>
+                </ListItemIcon>
+                <ListItemText primary="RoomUser" />
+              </ListItemButton>
+            </ListItem>
+            </List>
+
+            <List component="div" disablePadding>
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('RoomAdmin')}}>
+                  <ListItemIcon>
+                  </ListItemIcon>
+                  <ListItemText primary="Admin" />
+                </ListItemButton>
+
+              </List>
+            </Collapse>
 
                      </List>
           <Divider />

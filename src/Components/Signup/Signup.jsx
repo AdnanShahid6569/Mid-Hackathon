@@ -14,7 +14,6 @@ const SignUp = () => {
     const [lastname,setlastname] = useState();
     const [email,setemail] = useState();
     const [pass,setpass] = useState();
-    const [showLogin, setShowLogin] = useState(false); 
     const navigate = useNavigate()
 
     const userObj={
@@ -33,33 +32,48 @@ const SignUp = () => {
 
 console.log(name,lastname,email,pass,selValue);
 
-if (selValue === 'Admin' || selValue === 'User') {
-        <Login bhejo={selValue} />
-  } else {
-    alert('Please select a role (Admin or User)');
-  }
+if(selValue === "Admin" && (pass === "adnan123" && name === "Adnan" && email === "adnan@gmail.com" && lastname === "Shahid")){
 createUserWithEmailAndPassword(auth, email, pass)
-  .then( async(userCredential) => {
-    const user = userCredential.user;
-    console.log(user)
-
-    const uid = userCredential.user.uid
-
-    const setData = await setDoc(doc(db,'users',uid),userObj)
-    console.log(setData);
-    
-
-navigate('/login')
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  console.log(errorMessage);
+.then( async(userCredential) => {
+  const user = userCredential.user;
+  console.log(user)
   
-  });
+    const uid = userCredential.user.uid
+      const setData = await setDoc(doc(db,'users',uid),userObj)
+      console.log(setData);
+      
+      navigate('/login')
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      
+    });
+    
+  }else{"Please Select a User"}
 
+  if(selValue === "User" && (pass && name && lastname && email)){
+  createUserWithEmailAndPassword(auth, email, pass)
+.then( async(userCredential) => {
+  const user = userCredential.user;
+  console.log(user)
+  
+    const uid = userCredential.user.uid
+      const setData = await setDoc(doc(db,'users',uid),userObj)
+      console.log(setData);
+      
+      navigate('/login')
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      
+    });
+  }else{alert("please Select a User Only AdnanShahid Admin")}
+}
 
-  }
   return (
     <>
      <Container maxWidth="xl" className={styles.container}>
