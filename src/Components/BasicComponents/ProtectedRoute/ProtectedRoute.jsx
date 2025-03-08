@@ -1,7 +1,8 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
 const ProtectedRoute = ({ children, role }) => {
+  localStorage.getItem('uid') ? <Outlet /> : <Navigate to="Dashboard"/>
   const userData = JSON.parse(localStorage.getItem('UserData'));
 
   // If userData is not available, redirect to login

@@ -27,6 +27,11 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const nav = useNavigate();
 
+  const data = localStorage.getItem("UserData")
+  const parseData = JSON.parse(data)
+  // console.log(parseData);
+  const role = parseData.selValue;
+
   return (
     <Box sx={{ display: 'flex' }}>
       {/* <CssBaseline /> */}
@@ -61,12 +66,29 @@ export default function Dashboard() {
           <List>
             {/* Parent Item */}
             <ListItem disablePadding>
-              <ListItemButton onClick={()=>{navigate('Users')}}>
+              {role === "Admin" ? <ListItemButton onClick={()=>{navigate('Users')}}>
                 
                 <ListItemIcon>
                   <AccessibilityNewIcon style={{fontSize:'30px'}}/>
                 </ListItemIcon>
                 <ListItemText primary="User" />
+              </ListItemButton> : console.log('You User')
+              }
+            </ListItem>
+
+          </List>
+          {role === "Admin" ? <Divider />: console.log("No")}
+
+
+          <List>
+            {/* Parent Item */}
+            <ListItem disablePadding>
+              <ListItemButton onClick={()=>{navigate('profile')}}>
+                
+                <ListItemIcon>
+                  <AccessibilityNewIcon style={{fontSize:'30px'}}/>
+                </ListItemIcon>
+                <ListItemText primary="Profile" />
               </ListItemButton>
             </ListItem>
 
@@ -74,6 +96,8 @@ export default function Dashboard() {
           <Divider />
 
           <List>
+
+            
             {/* Parent Item */}
             <ListItem disablePadding>
               <ListItemButton onClick={()=>{navigate('custumer')}}>
@@ -107,19 +131,11 @@ export default function Dashboard() {
                 <ListItemIcon>
                   <FaChalkboardTeacher style={{fontSize:'25px'}}/>
                 </ListItemIcon>
-                <ListItemText primary="RoomUser" />
+                <ListItemText primary="RoomList" /> 
               </ListItemButton>
             </ListItem>
             </List>
 
-            <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('RoomAdmin')}}>
-                  <ListItemIcon>
-                  </ListItemIcon>
-                  <ListItemText primary="Admin" />
-                </ListItemButton>
-
-              </List>
             </Collapse>
 
                      </List>
@@ -145,7 +161,7 @@ export default function Dashboard() {
   <List>
             {/* Parent Item */}
             <ListItem disablePadding>
-              <ListItemButton >
+              <ListItemButton onClick={()=>{navigate("payment")}}>
                 <ListItemIcon>
                 <LuNewspaper style={{fontSize:'25px'}}/>
                 </ListItemIcon>
@@ -159,7 +175,7 @@ export default function Dashboard() {
           {/*Five School  */}
           <List >
             <ListItem disablePadding>
-              <ListItemButton >
+              <ListItemButton onClick={()=>{navigate('Service')}}>
                 <ListItemIcon>
                 <FaSchool style={{fontSize:'25px'}}/>
                 </ListItemIcon>

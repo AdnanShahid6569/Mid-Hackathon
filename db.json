@@ -1,0 +1,110 @@
+{
+  "rooms": [
+    {
+      "RoomID": 1,
+      "RoomNumber": "101",
+      "RoomType": "Single",
+      "Status": "Available",
+      "Price": 1500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    },
+    {
+      "RoomID": 2,
+      "RoomNumber": "102",
+      "RoomType": "Double",
+      "Status": "Available",
+      "Price": 2500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,double"
+    },
+    {
+      "RoomID": 3,
+      "RoomNumber": "103",
+      "RoomType": "Single",
+      "Status": "Available",
+      "Price": 1500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    },
+    {
+      "RoomID": 4,
+      "RoomNumber": "104",
+      "RoomType": "Suite",
+      "Status": "Available",
+      "Price": 4000,
+      "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+    },
+    {
+      "RoomID": 5,
+      "RoomNumber": "105",
+      "RoomType": "Double",
+      "Status": "Available",
+      "Price": 2500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,double"
+    },
+    {
+      "RoomID": 6,
+      "RoomNumber": "106",
+      "RoomType": "Single",
+      "Status": "Available",
+      "Price": 1500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    },
+    {
+      "RoomID": 7,
+      "RoomNumber": "107",
+      "RoomType": "Suite",
+      "Status": "Available",
+      "Price": 4000,
+      "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+    },
+    {
+      "RoomID": 8,
+      "RoomNumber": "108",
+      "RoomType": "Double",
+      "Status": "Available",
+      "Price": 2500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,double"
+    },
+    {
+      "RoomID": 9,
+      "RoomNumber": "109",
+      "RoomType": "Single",
+      "Status": "Available",
+      "Price": 1500,
+      "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    },
+    {
+      "RoomID": 10,
+      "RoomNumber": "110",
+      "RoomType": "Suite",
+      "Status": "Available",
+      "Price": 4000,
+      "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Room Service",
+      "description": "24/7 room service for food and beverages.",
+      "price": 15
+    },
+    {
+      "id": 2,
+      "name": "Spa",
+      "description": "Relaxing spa treatments and massages.",
+      "price": 50
+    },
+    {
+      "id": 3,
+      "name": "Laundry",
+      "description": "Daily laundry and dry cleaning services.",
+      "price": 10
+    },
+    {
+      "id": 4,
+      "name": "Airport Shuttle",
+      "description": "Complimentary airport shuttle service.",
+      "price": 25
+    }
+  ]
+}
