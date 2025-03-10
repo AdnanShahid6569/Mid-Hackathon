@@ -186,6 +186,20 @@ export default function Dashboard() {
               </List>
           <Divider />
 
+           {/*Five School  */}
+           <List >
+            <ListItem disablePadding>
+              <ListItemButton onClick={()=>{navigate('Inventry')}}>
+                <ListItemIcon>
+                <FaSchool style={{fontSize:'25px'}}/>
+                </ListItemIcon>
+                <ListItemText primary="Inventry"/>
+              </ListItemButton>
+            </ListItem>
+
+              </List>
+          <Divider />
+
         </Box>
       </Drawer>
       

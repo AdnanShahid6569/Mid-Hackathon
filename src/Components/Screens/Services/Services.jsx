@@ -12,7 +12,7 @@ const Services = () => {
   const role = parseData.selValue;
 
   const [myservice,setMyservice] = useState([]);
-  const [refresh,setRefresh] = useState(true);
+  // const [refresh,setRefresh] = useState(false);
   useEffect(()=>{
     axios.get("http://localhost:3000/services")
     .then((res)=>{
@@ -22,7 +22,12 @@ const Services = () => {
   },[])
 
   const handleDelete=(id)=>{
-    axios.delete(`http://localhost:3000/services/${id}`)
+    const confirm = window.confirm("Are You Sure Delete Services")
+    if(confirm){
+      axios.delete(`http://localhost:3000/services/${id}`)
+      location.reload()
+      // setRefresh(true)
+    }
    
   }
   return (

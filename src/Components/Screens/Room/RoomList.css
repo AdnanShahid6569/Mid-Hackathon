@@ -187,12 +187,12 @@
 }
 
 .room-head button:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838;
 }
 
 
 .delete-btn {
-  background-color: #dc3545; /* Red color */
+  background-color: #dc3545; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -203,9 +203,32 @@
 }
 
 .delete-btn:hover {
-  background-color: #c82333; /* Darker red on hover */
+  background-color: #c82333; 
 }
 
 .delete-btn:active {
-  background-color: #bd2130; /* Even darker red on click */
+  background-color: #bd2130; 
+}
+
+
+
+.update-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  font-size: 17px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

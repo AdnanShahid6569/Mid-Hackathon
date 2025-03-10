@@ -14,7 +14,6 @@ const ServiceForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Service Submitted:', service);
-    // Here you can add logic to send the data to an API or handle it as needed
     axios.post(' http://localhost:3000/services', service)
     .then((res)=>{
         console.log(res.data);

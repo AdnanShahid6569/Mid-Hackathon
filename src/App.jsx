@@ -15,7 +15,11 @@ import PaymentForm from './Components/Screens/Payment/Payment';
 import Services from './Components/Screens/Services/Services';
 import AuthRoute from './Components/BasicComponents/ProtectedRoute/AuthRoute';
 import AddServices from './Components/Screens/Services/AddServices';
+import Inventry from './Components/Screens/Inventry/Inventry';
+import AddInventry from './Components/Screens/Inventry/AddInventry';
+import UpdateInventry from './Components/Screens/Inventry/UpdateInventry';
 
+// api   json-server --watch db.json
 const App = () => {
   return (
     <>
@@ -102,6 +106,34 @@ const App = () => {
             element={
               <ProtectedRoute role={['Admin', 'User']}>
                 <AddServices />
+              </ProtectedRoute>
+            }
+          />
+
+
+          <Route
+            path="Inventry"
+            element={
+              <ProtectedRoute role={['Admin', 'User']}>
+                <Inventry />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="AddInventry"
+            element={
+              <ProtectedRoute role="Admin">
+                <AddInventry />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="UpdateInventry/:id"
+            element={
+              <ProtectedRoute role="Admin">
+                <UpdateInventry />
               </ProtectedRoute>
             }
           />
