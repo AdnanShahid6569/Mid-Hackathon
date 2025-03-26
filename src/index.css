@@ -1,0 +1,199 @@
+/* // {
+    //   "RoomID": 1,
+    //   "RoomNumber": "101",
+    //   "RoomType": "Single",
+    //   "Status": "Available",
+    //   "Price": 1500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    // },
+    // {
+    //   "RoomID": 2,
+    //   "RoomNumber": "102",
+    //   "RoomType": "Double",
+    //   "Status": "Available",
+    //   "Price": 2500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,double"
+    // },
+    // {
+    //   "RoomID": 3,
+    //   "RoomNumber": "103",
+    //   "RoomType": "Single",
+    //   "Status": "Available",
+    //   "Price": 1500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    // },
+    // {
+    //   "RoomID": 4,
+    //   "RoomNumber": "104",
+    //   "RoomType": "Suite",
+    //   "Status": "Available",
+    //   "Price": 4000,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+    // },
+    // {
+    //   "RoomID": 5,
+    //   "RoomNumber": "105",
+    //   "RoomType": "Double",
+    //   "Status": "Available",
+    //   "Price": 2500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,double"
+    // },
+    // {
+    //   "RoomID": 6,
+    //   "RoomNumber": "106",
+    //   "RoomType": "Single",
+    //   "Status": "Available",
+    //   "Price": 1500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    // },
+    // {
+    //   "RoomID": 7,
+    //   "RoomNumber": "107",
+    //   "RoomType": "Suite",
+    //   "Status": "Available",
+    //   "Price": 4000,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+    // },
+    // {
+    //   "RoomID": 8,
+    //   "RoomNumber": "108",
+    //   "RoomType": "Double",
+    //   "Status": "Available",
+    //   "Price": 2500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,double"
+    // },
+    // {
+    //   "RoomID": 9,
+    //   "RoomNumber": "109",
+    //   "RoomType": "Single",
+    //   "Status": "Available",
+    //   "Price": 1500,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,single"
+    // },
+    // {
+    //   "RoomID": 10,
+    //   "RoomNumber": "110",
+    //   "RoomType": "Suite",
+    //   "Status": "Available",
+    //   "Price": 4000,
+    //   "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+    // } */
+
+
+/* 
+
+    {
+        "id": 108,
+        "roomNumber": "108",
+        "type": "Double",
+        "status": "Available",
+        "price": 65,
+        "imageSrc": "https://media.nomadicmatt.com/2023/cheaphotelrooms.jpg",
+        "amenities": [
+          "WiFi",
+          "TV"
+        ],
+        "capacity": 1,
+        "bookedid": "VtzU6iizuPTH76Tt0qxkQEWW7og1"
+      },
+      {
+        "id": 109,
+        "roomNumber": "109",
+        "type": "Deluxe",
+        "status": "Booked",
+        "price": 135,
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQgs3Hy8t4qdK1Z5ChsGAeCMZt-Wzf7EtP0Q&s",
+        "amenities": [
+          "WiFi",
+          "TV",
+          "Mini Bar",
+          "Air Conditioning",
+          "Balcony"
+        ],
+        "capacity": 2,
+        "bookedid": "F5UJSCpj7DaDHFeQcb6IyjSjGLT2"
+      },
+      {
+        "id": 110,
+        "roomNumber": "110",
+        "type": "Standard",
+        "status": "Available",
+        "price": 75,
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HK0-d-JZaJHi8iAtUh-MgyYyLmU-uT2C8w&s",
+        "amenities": [
+          "WiFi",
+          "TV",
+          "Air Conditioning"
+        ],
+        "capacity": 2,
+        "bookedid": "Xo2ZKJkjEnc5bJ4d18UkudIZ0SA3"
+      },
+      {
+        "id": 111,
+        "roomNumber": "111",
+        "type": "Suite",
+        "status": "Available",
+        "price": 220,
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGoZMcu3-NaZ4ZThgWqtH8mH2ujeBWE9Frkw&s",
+        "amenities": [
+          "WiFi",
+          "TV",
+          "Mini Bar",
+          "Jacuzzi",
+          "Air Conditioning"
+        ],
+        "capacity": 4
+      },
+      {
+        "id": 112,
+        "roomNumber": "112",
+        "type": "Single",
+        "status": "Available",
+        "price": 70,
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_0RW0hGHXPR2S-Om3xiQYX4pH6wc4rNyOJg&s",
+        "amenities": [
+          "WiFi",
+          "TV"
+        ],
+        "capacity": 1
+      },
+      {
+        "id": 113,
+        "roomNumber": "113",
+        "type": "Deluxe",
+        "status": "Available",
+        "price": 140,
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQxrnqIF1ogNSLX2fTAiGLDezfrhqXbKYnLA&s",
+        "amenities": [
+          "WiFi",
+          "TV",
+          "Mini Bar",
+          "Air Conditioning",
+          "Balcony"
+        ],
+        "capacity": 2
+      },
+      {
+        "id": 114,
+        "roomNumber": "114",
+        "type": "Standard",
+        "status": "Available",
+        "price": 78,
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAm--XV_uK7E7pDKT2BtnJCgfeANbEhrJp1w&s",
+        "amenities": [
+          "WiFi",
+          "TV",
+          "Air Conditioning"
+        ],
+        "capacity": 2,
+        "bookedId": ""
+      },
+      {
+        "id": "1141",
+        "capacity": "2",
+        "roomNumber": "232323",
+        "status": "Available",
+        "type": "laxury",
+        "price": "50",
+        "bookedid": "VtzU6iizuPTH76Tt0qxkQEWW7og1"
+      } */

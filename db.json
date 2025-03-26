@@ -2,83 +2,75 @@
   "rooms": [
     {
       "RoomID": 1,
-      "RoomNumber": "101",
-      "RoomType": "Single",
-      "Status": "Available",
-      "Price": 1500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,single"
-    },
-    {
-      "RoomID": 2,
-      "RoomNumber": "102",
-      "RoomType": "Double",
-      "Status": "Available",
-      "Price": 2500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,double"
-    },
-    {
-      "RoomID": 3,
-      "RoomNumber": "103",
-      "RoomType": "Single",
-      "Status": "Available",
-      "Price": 1500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,single"
-    },
-    {
-      "RoomID": 4,
-      "RoomNumber": "104",
-      "RoomType": "Suite",
-      "Status": "Available",
-      "Price": 4000,
-      "Image": "https://loremflickr.com/300/200/hotel,room,suite"
-    },
-    {
-      "RoomID": 5,
-      "RoomNumber": "105",
-      "RoomType": "Double",
-      "Status": "Available",
-      "Price": 2500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,double"
-    },
-    {
-      "RoomID": 6,
-      "RoomNumber": "106",
-      "RoomType": "Single",
-      "Status": "Available",
-      "Price": 1500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,single"
-    },
-    {
-      "RoomID": 7,
       "RoomNumber": "107",
       "RoomType": "Suite",
       "Status": "Available",
-      "Price": 4000,
-      "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+      "Price": 210,
+      "Image": "https://www.decorilla.com/online-decorating/wp-content/uploads/2019/01/Luxury-boutique-interior-design-before-and-after-by-Decorilla-1.jpg"
     },
     {
-      "RoomID": 8,
+      "RoomID": 2,
       "RoomNumber": "108",
       "RoomType": "Double",
       "Status": "Available",
-      "Price": 2500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,double"
+      "Price": 65,
+      "Image": "https://media.nomadicmatt.com/2023/cheaphotelrooms.jpg"
+    },
+    {
+      "RoomID": 3,
+      "RoomNumber": "109",
+      "RoomType": "Deluxe",
+      "Status": "Available",
+      "Price": 135,
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQgs3Hy8t4qdK1Z5ChsGAeCMZt-Wzf7EtP0Q&s"
+    },
+    {
+      "RoomID": 4,
+      "RoomNumber": "110",
+      "RoomType": "Standard",
+      "Status": "Available",
+      "Price": 75,
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HK0-d-JZaJHi8iAtUh-MgyYyLmU-uT2C8w&s"
+    },
+    {
+      "RoomID": 5,
+      "RoomNumber": "111",
+      "RoomType": "Suite",
+      "Status": "Available",
+      "Price": 220,
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGoZMcu3-NaZ4ZThgWqtH8mH2ujeBWE9Frkw&s"
+    },
+    {
+      "RoomID": 6,
+      "RoomNumber": "112",
+      "RoomType": "Single",
+      "Status": "Available",
+      "Price": 70,
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_0RW0hGHXPR2S-Om3xiQYX4pH6wc4rNyOJg&s"
+    },
+    {
+      "RoomID": 7,
+      "RoomNumber": "113",
+      "RoomType": "Deluxe",
+      "Status": "Available",
+      "Price": 140,
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQxrnqIF1ogNSLX2fTAiGLDezfrhqXbKYnLA&s"
+    },
+    {
+      "RoomID": 8,
+      "RoomNumber": "114",
+      "RoomType": "Standard",
+      "Status": "Available",
+      "Price": 78,
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAm--XV_uK7E7pDKT2BtnJCgfeANbEhrJp1w&s"
     },
     {
       "RoomID": 9,
-      "RoomNumber": "109",
-      "RoomType": "Single",
+      "RoomNumber": "115",
+      "RoomType": "Luxury",
       "Status": "Available",
-      "Price": 1500,
-      "Image": "https://loremflickr.com/300/200/hotel,room,single"
-    },
-    {
-      "RoomID": 10,
-      "RoomNumber": "110",
-      "RoomType": "Suite",
-      "Status": "Available",
-      "Price": 4000,
-      "Image": "https://loremflickr.com/300/200/hotel,room,suite"
+      "Price": 50,
+      "Image": "https://www.italianbark.com/wp-content/uploads/2018/01/hotel-room-design-trends-italianbark-interior-design-blog.jpg"
     }
   ],
   "services": [
@@ -108,12 +100,6 @@
     }
   ],
   "Inventry": [
-    {
-      "name": "Adnan",
-      "quantity": "12",
-      "price": "1200",
-      "id": 1
-    },
     {
       "name": "abid",
       "quantity": "12",

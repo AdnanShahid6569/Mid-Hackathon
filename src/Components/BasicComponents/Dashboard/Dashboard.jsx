@@ -46,7 +46,8 @@ export default function Dashboard() {
           </Typography>
 
           <Button onClick={() => {
-            localStorage.clear()
+            localStorage.removeItem("UserData")
+            localStorage.removeItem("uid")
             nav('/Login')
           }}
             variant='contained' color="white"><AiOutlineLogout style={{ fontSize: '32px' }} /> &nbsp;Logout</Button>
@@ -141,21 +142,6 @@ export default function Dashboard() {
                      </List>
           <Divider />
 
-
-          {/*Third Subject */}
-          <List>
-            {/* Parent Item */}
-            <ListItem disablePadding>
-              <ListItemButton >
-                <ListItemIcon>
-                <SubjectIcon style={{fontSize:'30px'}}/>
-                </ListItemIcon>
-                <ListItemText primary="Booking" />
-              </ListItemButton>
-            </ListItem>
-
-          </List>
-          <Divider />
 
   {/*Fourth Syllabus */}
   <List>

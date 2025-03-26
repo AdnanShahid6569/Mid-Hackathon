@@ -8,7 +8,6 @@ import Users from './Components/Screens/Users/Users';
 import Custumer from './Components/Screens/Custumer/Custumer';
 import ProtectedRoute from './Components/BasicComponents/ProtectedRoute/ProtectedRoute';
 import Roomlist from './Components/Screens/Room/Roomlist';
-// import RoomDetails from './Components/Screens/Room/RoomDetails';
 import CreateRoom from './Components/Screens/Room/CreateRoom';
 import ProfileCard from './Components/Screens/Profile/ProfileCard';
 import PaymentForm from './Components/Screens/Payment/Payment';
@@ -18,8 +17,10 @@ import AddServices from './Components/Screens/Services/AddServices';
 import Inventry from './Components/Screens/Inventry/Inventry';
 import AddInventry from './Components/Screens/Inventry/AddInventry';
 import UpdateInventry from './Components/Screens/Inventry/UpdateInventry';
+import RoomDetails from './Components/Screens/Room/RoomDetails';
+import ConfirmBooking from './Components/Screens/Room/ConfirmBooking';
 
-// api   json-server --watch db.json
+//local api   json-server --watch db.json
 const App = () => {
   return (
     <>
@@ -34,7 +35,6 @@ const App = () => {
 
         {/* Parent route for Dashboard */}
         <Route path="/Dashboard" element={<Dashboard />}>
-          {/* Admin can access Users */}
           <Route
             path="Users"
             element={
@@ -43,7 +43,6 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          {/* Both Admin and User can access Custumer */}
           <Route
             path="custumer"
             element={
@@ -53,7 +52,6 @@ const App = () => {
             }
           />
 
-          {/* Both Admin and User can access Room */}
           <Route
             path="Room"
             element={
@@ -63,13 +61,21 @@ const App = () => {
             }
           />
 
-          {/* <Route
+          <Route
             path="Roomdetail/:id"
             element={
               <ProtectedRoute role={['Admin', 'User']}>
                 <RoomDetails />
               </ProtectedRoute>}
-          /> */}
+          />
+
+          <Route
+            path="ConfirmBooking/:id"
+            element={
+              <ProtectedRoute role={['Admin', 'User']}>
+                <ConfirmBooking />
+              </ProtectedRoute>}
+          />
 
           <Route
             path="profile"

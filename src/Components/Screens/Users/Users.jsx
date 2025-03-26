@@ -6,12 +6,17 @@ const Users = () => {
     const [users, setUsers] = useState([]);
 
     const getUsers = async () => {
-        const querySnapshot = await getDocs(collection(db, "users"));
+        try {
+            const querySnapshot = await getDocs(collection(db, "users"));
         const usersData = querySnapshot.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
         }))
         setUsers(usersData)
+        } catch (error) {
+            console.log(error);
+            
+        }
 
     }
     useEffect(() => { getUsers() }, [])

@@ -1,14 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBV-5WdpHezAp1FZij8seF8e-shzUtlI8s",
-  authDomain: "mid-hackathon-cb4de.firebaseapp.com",
-  projectId: "mid-hackathon-cb4de",
-  storageBucket: "mid-hackathon-cb4de.firebasestorage.app",
-  messagingSenderId: "176107645581",
-  appId: "1:176107645581:web:590d4da0686d3a55d390c4"
+  apiKey: "AIzaSyBpOBdQNxF9MZL5ym6qdSXcgkeDjggPYZA",
+  authDomain: "hotel-management-f73e6.firebaseapp.com",
+  projectId: "hotel-management-f73e6",
+  storageBucket: "hotel-management-f73e6.firebasestorage.app",
+  messagingSenderId: "401518650443",
+  appId: "1:401518650443:web:aef445ac116125ea2ed9ce"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
